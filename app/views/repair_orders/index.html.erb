@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Repair Order Records</h1>
+<h1>Repair Orders</h1>
 
 <%= search_form_for @q, url: search_path do |f| %>
-  <%= f.label :ro_number_or_recommendations_or_maintenance_or_items_cause_or_items_correction_cont %>
+  <%= f.label "Search" %>
   <%= f.search_field :ro_number_or_recommendations_or_maintenance_or_items_cause_or_items_correction_cont %>
   
   <%= f.submit %>

@@ -1,0 +1,457 @@
+h1 {
+  color: white;
+}
+
+/* Main Styles*/
+
+body{
+  background: black url(carbon-fiber.png) repeat-x;
+}
+
+.th{
+  border: none;
+}
+
+.th:hover, .th:focus {
+  -webkit-box-shadow: 0 0 6px 1px rgba(28, 68, 132, 0.7);
+  box-shadow: 0 0 6px 1px rgba(28, 68, 132, 0.7); 
+}
+
+.strong{
+  font-weight:bold;
+}
+
+.blue{
+  color:#3177E8 !important;
+}
+
+.panel{
+  background: url(images/grey-bg.png);
+  color: white;
+  border-color:#444;
+}
+
+.panel p{
+  color:white;
+}
+
+.panel .panel{
+  background: url(images/white-bg.png);
+  border:none;
+  min-height:144px;
+}
+
+.panel h2, 
+.panel h3, 
+.panel h4{
+  color:white;
+}
+
+.panel .panel p, .panel .panel h3{
+  color: #D7D7D7;
+}
+
+.row .columns p{
+  margin-bottom:10px;
+}
+
+a,.side-nav li a{
+  color:#3177E8;
+}
+
+a:hover,.side-nav li a:hover{
+  color:#669AED;
+}
+
+.flt-rt{
+  float:right;
+}
+
+.flt-lt{
+  float:left;
+}
+
+#main img{
+  height:auto !important; 
+}
+
+/* Buttons and Links */
+
+.top-bar .has-form .button,
+.button, input[type=submit]{
+  background-color: #1C4484;
+  border-color: #11294F;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+
+.top-bar .has-form .button:hover,
+.button:hover, input[type=submit]:hover{
+  background-color:#21509C;
+}
+
+/* Header and Nav */
+
+h1.logo{
+  width:100%;
+  text-align:center;
+  background: url(images/logo.png) no-repeat;
+  background-position-x: 50%;
+  text-indent: -9999px;
+  height:90px;
+}
+
+/* Main Section */
+
+#main{
+  margin-bottom:35px;
+}
+
+.pricing-table{
+  border-color:#333;
+}
+
+
+
+.pricing-table .title{
+  background: url(images/white-bg.png);
+  color:#eee;
+}
+
+.pricing-table .bullet-item{
+  line-height:22px;
+  background: url(images/grey-bg.png);
+  color:#ddd;
+  border-color:#333;
+}
+
+.pricing-table .bullet-item:last-child{
+  border-bottom: none;
+}
+
+/* Page */
+.featured-image{
+  float:right;
+  margin:0 0 20px 20px;
+  width:350px;
+}
+
+/* Blog */
+
+#main.blog h2{
+  float:left;
+  margin-right:20px;
+}
+
+#main .side-nav{
+  display:inline-block;
+  float:left;
+  margin-bottom:20px;
+}
+
+#main .side-nav li{
+  float:left;
+  margin-right:20px;
+}
+
+.blog-post{
+  width:100%;
+  float:right;
+  margin-bottom:30px;
+}
+
+.post-image{
+  float:left;
+  margin-right:20px;
+}
+
+.post-image img{
+  width:350px;
+}
+
+
+.post-info{
+  display:inline-block;
+}
+
+.post-info p{
+  color:#ccc;
+  margin-bottom:10px;
+  font-size:14px;
+}
+
+.post-info h3{
+  margin-bottom:3px;
+}
+
+.post .blog-post{
+  width:100%;
+}
+
+.post .post-image{
+  float: right;
+  margin: 10px 10px 30px 30px;
+}
+
+.post .post-info{
+  margin-bottom:10px;
+}
+
+.post #blog-comment-form{
+  width:45%;
+  display:inline-block;
+  float:right;
+  margin-right:5%;
+}
+
+.post form{
+  width:100%;
+}
+
+.post form label{
+  color:white;
+}
+
+.post #comments ol{
+  width:95%;
+  margin:0;
+  list-style:none;
+  min-height:200px;
+}
+
+.post #comments ol li{
+  display:inline-block;
+  margin-bottom:20px;
+  font-size:14px;
+  background: url(images/white-bg.png);
+  width:100%;
+  padding:2% 3%;
+}
+
+.post #comments ol li .comment_info span{
+  display:inline-block;
+  margin-bottom:4px;
+  font-size:16px;
+  font-weight:bold;
+}
+
+.post #comments ol li img{
+  float:left;
+  margin:7px 10px 10px 0;
+}
+
+.post #comments{
+  display:inline-block;
+  float:left;
+  width:45%;
+}
+
+aside#share{
+  margin-bottom:20px;
+}
+
+/* Footer */
+
+#footer{
+  margin-top:22px;
+  border-right:none;
+  border-left:none;
+}
+
+#footer label{
+  color:white;
+}
+
+#footer #full-form{
+  margin-left:10px;
+}
+
+#footer #contact-form-large textarea{
+  height:300px;
+}
+
+#sponsors a{
+  margin-right:15px;
+}
+
+#sponsors a img{
+  height:76px;
+}
+
+/* Modal */
+
+#modal{
+  background-color:#1E1E1E;
+}
+
+#modal h2, #modal p, #modal label{
+  color:white;
+  font-size:16px;
+}
+
+#modal h2{
+  font-size:24px;
+  margin-bottom:20px;
+}
+
+#modal .radio_buttons, #modal .long_text{
+  margin-top:40px;
+}
+
+#modal .radio_buttons > span{
+  display:block;
+}
+
+#modal .radio_buttons label{
+  display:inline-block;
+  float:left;
+  width:30px;
+  height:30px;
+  margin-right: 5px;
+}
+
+#modal .radio_buttons label input{
+  margin-right:1px;
+}
+
+#modal .radio_buttons small{
+  width:100%;
+  display:block;
+  margin-top: 35px;
+}
+
+label{
+  color: white;
+}
+
+/* Forms */
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+  background-color:#3F3F3F;
+  border-color:#000;
+}
+
+input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  textarea:focus {
+    background: #616161;
+    border-color: #777;
+    outline: none; }
+
+/* Google Maps */
+
+#map-canvas {
+  margin: .2em 0 0 0;
+  padding: 0px;
+  height: 300px;
+  width:100%;
+  
+}
+
+/* Gallery */
+
+.gallery a h4{
+  max-width:200px;
+  text-align:center;
+}
+
+.gallery a{
+  display:inline-block;
+  float:left;
+  margin-right:20px;
+}
+
+/* Slideshow */
+
+.slidesjs-container{
+  margin-bottom:-40px;
+  z-index:-10;
+}
+
+#slides .slidesjs-navigation{
+  color:#777;
+}
+
+@media only screen and (max-width: 59em){
+  li.has-form a.button{
+    height:30px;
+  }
+  
+}
+
+@media only screen and (max-width: 767px){
+  .slidesjs-container{
+    margin-bottom:0;
+  }
+  
+  /* Blog */
+  
+  #main .side-nav{
+    padding-top:5px;
+  }
+  
+  /* Footer */
+  
+  #footer .large-4{
+    text-align:center;
+  }
+  
+  #footer #contact-form{
+    margin-top:20px;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .post #blog-comment-form, .post #comments, .post #comments ol{
+    width:100%;
+    margin-right:0;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  h1.logo{
+    width:100%;
+    background-size:100%;
+    height:100px;
+  }
+  
+  /* Blog */
+  
+  .post-image, .post-body{
+    width:100%;
+    float:none;
+    text-align:center;
+  }
+  
+  .post .post-image{
+    margin:0 0 20px 0; 
+  }
+  
+  /* Footer */
+  
+  #footer #sponsors a{
+    width:100%;
+    display:block;
+    text-align:center;
+    margin-bottom:15px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi){
+  h1.logo{
+    background: url(images/eurotech-logo-@2x.png) no-repeat;
+    width:100%;
+    background-size:260px;
+    background-position-x:47%;
+  }
+}
