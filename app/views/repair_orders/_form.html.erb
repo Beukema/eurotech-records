@@ -1,0 +1,53 @@
+<%= form_for(@repair_order) do |f| %>
+  <% if @repair_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@repair_order.errors.count, "error") %> prohibited this repair_order from being saved:</h2>
+
+      <ul>
+      <% @repair_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :ro_number %><br>
+    <%= f.number_field :ro_number %>
+  </div>
+
+  <div class="item-list">
+    <%= f.fields_for :items do |builder| %>
+      <div class="item well">
+        <div class="form-group">
+          <%= builder.label :cause, "Cause" %>
+          <%= builder.text_area :cause, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= builder.label :correction, "Correction" %>
+          <%= builder.text_area :correction, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= builder.label :_destroy, "Remove Item" %>
+          <%= builder.check_box :_destroy %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <a class="add-item-button" href="#">Add Item</a>
+
+  <div class="form-group">
+    <%= f.label :recommendations %><br>
+    <%= f.text_area :recommendations %>
+  </div>
+  <div class="form-group">
+    <%= f.label :maintenance %><br>
+    <%= f.text_area :maintenance %>
+  </div>
+  
+    
+  <div class="actions">
+    <%= f.submit "Submit", class: "btn btn-default" %>
+  </div>
+<% end %>

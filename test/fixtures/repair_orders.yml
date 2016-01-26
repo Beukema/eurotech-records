@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ro_number: 1
+  recommendations: MyText
+  maintenance: MyText
+
+two:
+  ro_number: 1
+  recommendations: MyText
+  maintenance: MyText

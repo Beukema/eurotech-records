@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  repair_order: 1
+  recommendations: MyText
+  maintenance: MyText
+
+two:
+  repair_order: 1
+  recommendations: MyText
+  maintenance: MyText

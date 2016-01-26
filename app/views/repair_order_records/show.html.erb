@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Repair order:</strong>
+  <%= @repair_order_record.repair_order %>
+</p>
+
+<p>
+  <strong>Recommendations:</strong>
+  <%= @repair_order_record.recommendations %>
+</p>
+
+<p>
+  <strong>Maintenance:</strong>
+  <%= @repair_order_record.maintenance %>
+</p>
+
+<%= link_to 'Edit', edit_repair_order_record_path(@repair_order_record) %> |
+<%= link_to 'Back', repair_order_records_path %>
