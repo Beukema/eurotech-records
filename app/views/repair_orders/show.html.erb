@@ -1,5 +1,12 @@
 <h2>Repair Order #<%= @repair_order.ro_number %></h2>
 
+<% @repair_order.items.each do |i| %>
+  <div class="repair-order-item panel">
+    <p><span class="item-label">Cause: </span><%= i.cause %></p>
+    <p><span class="item-label">Correction: </span><%= i.correction %></p>
+  </div>
+<% end %>
+
 <p>
   <strong>Recommendations:</strong>
   <%= @repair_order.recommendations %>
