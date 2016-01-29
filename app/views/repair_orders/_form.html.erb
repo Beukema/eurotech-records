@@ -12,22 +12,39 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :ro_number %><br>
+    <%= f.label :ro_number %>
     <%= f.number_field :ro_number %>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
   <div class="item-list">
     <%= f.fields_for :items do |builder| %>
-      <div class="item well">
+      <div class="item">
         <div class="form-group">
-          <%= builder.label :cause, "Cause" %>
-          <%= builder.text_area :cause, class: 'form-control' %>
+          <div class="item-inputs">
+            <%= builder.label :cause, "Cause" %>
+            <%= builder.text_area :cause, class: 'form-control' %>
+          </div>
+          <div class="item-uploads"><span class="item-upload-field"><i class="fa fa-camera"></i><i class="fa fa-paperclip"></i></span></div>
         </div>
         <div class="form-group">
-          <%= builder.label :correction, "Correction" %>
-          <%= builder.text_area :correction, class: 'form-control' %>
+          <div class="item-inputs">
+            <%= builder.label :correction, "Correction" %>
+            <%= builder.text_area :correction, class: 'form-control' %>
+          </div>
+          <div class="item-uploads"><span class="item-upload-field"><i class="fa fa-camera"></i><i class="fa fa-paperclip"></i></span></div>
         </div>
-        <div class="form-group">
+        <div class="form-group delete-item">
           <%= builder.label :_destroy, "Remove Item" %>
           <%= builder.check_box :_destroy %>
         </div>
@@ -35,17 +52,20 @@
     <% end %>
   </div>
 
-  <a class="add-item-button" href="#">Add Item</a>
+  <a class="add-item-button" href="#">Add Record</a>
 
-  <div class="form-group">
-    <%= f.label :recommendations %><br>
-    <%= f.text_area :recommendations %>
+  <div class="row">
+    <div class="detail-fields">
+      <div class="form-group large-6 columns">
+        <%= f.label :recommendations %>
+        <%= f.text_area :recommendations %>
+      </div>
+      <div class="form-group large-6 columns">
+        <%= f.label :maintenance %>
+        <%= f.text_area :maintenance %>
+      </div>
+    </div>  
   </div>
-  <div class="form-group">
-    <%= f.label :maintenance %><br>
-    <%= f.text_area :maintenance %>
-  </div>
-  
     
   <div class="actions">
     <%= f.submit "Submit", class: "btn btn-default" %>

@@ -23,7 +23,8 @@ class RepairOrdersController < ApplicationController
   def update
     respond_to do |format|
       if @repair_order.update(repair_order_params)
-        format.html { redirect_to @repair_order, notice: 'Repair order was successfully updates.' }
+        flash[:success] = "Repair Order ##{@repair_order.ro_number} was successfully updated."
+        format.html { redirect_to @repair_order }
       else
         format.html { render :edit }
       end

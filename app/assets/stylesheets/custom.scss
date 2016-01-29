@@ -1,11 +1,29 @@
 h1 {
-  color: white;
+  color: white !important;
 }
 
 /* Main Styles*/
 
 body{
   background: black url(carbon-fiber.png) repeat-x;
+}
+
+.table {
+  width: 100%;  
+  background-color: transparent;
+  border: none;
+  
+  a {
+    color: white;
+  }
+
+  thead th, tr td {
+    color: white;
+  }
+  
+  thead, tr:nth-child(even){
+    background-color: rgba(100,100,100,.5);
+  }
 }
 
 .th{
@@ -26,7 +44,7 @@ body{
 }
 
 .panel{
-  background: url(images/grey-bg.png);
+  background-color: rgba(40, 40, 40, 0.8);
   color: white;
   border-color:#444;
 }
@@ -36,7 +54,7 @@ body{
 }
 
 .panel .panel{
-  background: url(images/white-bg.png);
+  background-color: rgba(100,100,100,.3);
   border:none;
   min-height:144px;
 }
@@ -113,13 +131,13 @@ h1.logo{
 
 
 .pricing-table .title{
-  background: url(images/white-bg.png);
+  background-color: rgba(100,100,100,.3);
   color:#eee;
 }
 
 .pricing-table .bullet-item{
   line-height:22px;
-  background: url(images/grey-bg.png);
+  background-color: rgba(40, 40, 40, 0.8);
   color:#ddd;
   border-color:#333;
 }
@@ -222,7 +240,7 @@ h1.logo{
   display:inline-block;
   margin-bottom:20px;
   font-size:14px;
-  background: url(images/white-bg.png);
+  background-color: rgba(100,100,100,.3);
   width:100%;
   padding:2% 3%;
 }

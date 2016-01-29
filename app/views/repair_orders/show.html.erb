@@ -1,9 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Repair order:</strong>
-  <%= @repair_order.ro_number %>
-</p>
+<h2>Repair Order #<%= @repair_order.ro_number %></h2>
 
 <p>
   <strong>Recommendations:</strong>
@@ -15,5 +10,4 @@
   <%= @repair_order.maintenance %>
 </p>
 
-<%= link_to 'Edit', edit_repair_order_path(@repair_order) %> |
-<%= link_to 'Back', repair_orders_path %>
+<%= link_to 'Edit', edit_repair_order_path(@repair_order) %>

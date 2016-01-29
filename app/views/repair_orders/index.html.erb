@@ -1,38 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Repair Orders</h1>
-
-<%= search_form_for @q, url: search_path do |f| %>
-  <%= f.label "Search" %>
-  <%= f.search_field :ro_number_or_recommendations_or_maintenance_or_items_cause_or_items_correction_cont %>
-  
-  <%= f.submit %>
-<% end %>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Repair order</th>
-      <th>Recommendations</th>
-      <th>Maintenance</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @repair_orders.each do |repair_order| %>
-      <tr>
-        <td><%= repair_order.ro_number %></td>
-        <td><%= repair_order.recommendations %></td>
-        <td><%= repair_order.maintenance %></td>
-        <td><%= link_to 'Show', repair_order %></td>
-        <td><%= link_to 'Edit', edit_repair_order_path(repair_order) %></td>
-        <td><%= link_to 'Destroy', repair_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<h2>Repair Orders</h2>
+<%= render 'shared/search_box' %>
+<%= render 'shared/repair_order_table' %>
 <br>
-
 <%= link_to 'New Repair order', new_repair_order_path %>

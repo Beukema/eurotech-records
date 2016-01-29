@@ -8,12 +8,17 @@
 </head>
 <body>
   <%= render 'layouts/navigation' %>
+  
+  <h2 class="logo">EuroTech</h2>
+  <% flash.each do |message_type, message| %>
+    <div class="alert-box <%= message_type %>"><%= message %></div>
+  <% end %>
   <div class="container">
-    <div class="row">
-      <%= yield %>
+    <div class="panel">
+      <div class="row">
+        <%= yield %>
+      </div>
     </div>
   </div>
-
-
 </body>
 </html>
