@@ -1,9 +1,9 @@
 class SearchController < ApplicationController
   def index
     @q = RepairOrder.ransack(params[:q])
-    @results = @q.result.includes(:items)
-    @repair_orders = @q.result.includes(:items)
-    
-#    @results = RepairOrder.search(name_cont: params[:q]).result
+
+    @repair_orders = @q.result(distinct: true).includes(:items)
+    puts @repair_orders.inspect
+
   end
 end
