@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  $('.app-master-text').on('change', function(){
+    $('.app-mimic-text input[type=search]').val($(this).val())
+  });
+  
   $(document).on('click', '.add-item-button', function(e){
     e.preventDefault();
     var itemCount = $('.item').length

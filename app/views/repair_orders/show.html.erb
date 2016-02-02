@@ -2,19 +2,24 @@
 
 <% @repair_order.items.each do |i| %>
   <div class="repair-order-item panel">
-    <p><span class="item-label">Cause: </span><%= i.cause %></p>
-    <p><span class="item-label">Correction: </span><%= i.correction %></p>
+    <p><strong class="item-label">Cause</strong><%= simple_format i.cause %></p>
+    <p><strong class="item-label">Correction</strong><%= simple_format i.correction %></p>
   </div>
 <% end %>
 
+<% unless @repair_order.recommendations.blank? %>
 <p>
-  <strong>Recommendations:</strong>
-  <%= @repair_order.recommendations %>
+  <strong>Recommendations</strong>
+  <%= simple_format @repair_order.recommendations %>
+</p>
+<% end %>
+
+<% unless @repair_order.maintenance.blank?  %>
+<p>
+  <strong>Maintenance</strong>
+  <%= simple_format @repair_order.maintenance %>
 </p>
 
-<p>
-  <strong>Maintenance:</strong>
-  <%= @repair_order.maintenance %>
-</p>
+<% end %>
 
 <%= link_to 'Edit', edit_repair_order_path(@repair_order) %>
