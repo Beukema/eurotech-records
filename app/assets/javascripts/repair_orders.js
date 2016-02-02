@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.app-master-text').on('change', function(){
+  $('.app-master-text').on('input', function(){
     $('.app-mimic-text input[type=search]').val($(this).val())
   });
   
