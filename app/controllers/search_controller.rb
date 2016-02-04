@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
   def list_results
-    @repair_orders = @q.result(distinct: true).includes(:items)
+    @repair_orders = @q.result(distinct: true).includes(:items).reverse
   end
   
   def open_first_result
