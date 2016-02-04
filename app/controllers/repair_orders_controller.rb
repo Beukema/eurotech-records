@@ -4,7 +4,7 @@ class RepairOrdersController < ApplicationController
   
   def index
     @q = RepairOrder.ransack(params[:q])
-    @repair_orders = RepairOrder.all
+    @repair_orders = RepairOrder.all.sort_by &:ro_number
   end
   
   def show
