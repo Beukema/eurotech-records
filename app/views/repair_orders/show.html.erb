@@ -1,4 +1,6 @@
 <h2>Repair Order #<%= @repair_order.ro_number %></h2>
+<p>Year: <%= @repair_order.year %></p>
+<p>Model: <%= @repair_order.model %></p>
 
 <% @repair_order.items.each do |i| %>
   <div class="repair-order-item panel">

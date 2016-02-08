@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160124211019) do
+ActiveRecord::Schema.define(version: 20160208140601) do
 
   create_table "items", force: :cascade do |t|
     t.text     "cause",           limit: 65535
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20160124211019) do
     t.text     "maintenance",     limit: 65535
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.integer  "year",            limit: 4
+    t.string   "model",           limit: 255
   end
 
 end

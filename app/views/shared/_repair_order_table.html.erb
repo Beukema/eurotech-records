@@ -2,9 +2,8 @@
   <thead>
     <tr>
       <th>Repair order</th>
-      <th>Recommendations</th>
-      <th>Maintenance</th>
-      <th>Causes</th>
+      <th>Year</th>
+      <th>Model</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -13,9 +12,8 @@
     <% @repair_orders.each do |repair_order| %>
       <tr>
         <td><%= repair_order.ro_number %></td>
-        <td><%= repair_order.recommendations %></td>
-        <td><%= repair_order.maintenance %></td>
-        <td><%= repair_order.items.count %></td>
+        <td><%= repair_order.year %></td>
+        <td><%= repair_order.model %></td>
         <td><%= link_to 'Show', repair_order %></td>
         <td><%= link_to 'Edit', edit_repair_order_path(repair_order) %></td>
       </tr>

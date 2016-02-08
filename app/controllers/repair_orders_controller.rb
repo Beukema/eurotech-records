@@ -59,7 +59,7 @@ class RepairOrdersController < ApplicationController
   
   def repair_order_params
     params.require(:repair_order)
-    .permit(:ro_number, :recommendations, :maintenance, items_attributes: [:id, :cause, :correction, :_destroy])
+    .permit(:ro_number, :year, :model, :recommendations, :maintenance, items_attributes: [:id, :cause, :correction, :_destroy])
   end
   
 end
