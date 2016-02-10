@@ -102,6 +102,7 @@
 .app-mimic-text {
  
   input[type=search]{
-    display: none;
+    display: inline-block;
+    width: 180px;
   }
 }

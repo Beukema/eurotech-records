@@ -13,17 +13,10 @@
       <li class="divider"></li>
     </ul>
     <ul class="right">
-      <li class="has-form"><input class="app-master-text" type="search"></li>
       <li class="has-form app-mimic-text app-ro-number-search">
         <%= search_form_for @q, url: ro_search_path do |f| %>
           <%= f.search_field :ro_number_eq %>
           <%= f.submit "Find by RO Number" %>
-        <% end %>
-      </li>
-      <li class="has-form app-mimic-text app-keyword-search">
-        <%= search_form_for @q, url: keyword_search_path do |f| %>
-          <%= f.search_field :recommendations_or_maintenance_or_items_cause_or_items_correction_cont %>
-          <%= f.submit "Text Search" %>
         <% end %>
       </li>
     </ul>

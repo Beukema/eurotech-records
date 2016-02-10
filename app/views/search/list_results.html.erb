@@ -1,3 +1,9 @@
 <h2>Search Results</h2>
+<p>Searching for: <%= @search %></p>
 <%= render 'shared/search_box' %>
-<%= render 'shared/repair_order_table' %>
+<!--<%= render 'shared/repair_order_table' %>-->
+
+<% @repair_orders.each do |r| %>
+<p>RO Number: <%= r.ro_number %> <%= link_to "Show", repair_order_path(r) %></p>
+<p><%= raw(r.highlight_fields(@search)) %></p>
+<% end %>
