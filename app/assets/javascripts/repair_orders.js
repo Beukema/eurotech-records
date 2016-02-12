@@ -18,8 +18,8 @@ $(document).ready(function(){
     
     uploads = '<div class="item-uploads"><span class="item-upload-field"><i class="fa fa-camera"></i><i class="fa fa-paperclip"></i></span></div>'
     
-    markup = '<div class="item"><div class="form-group"><div class="item-inputs">' + causeFields + '</div>' + uploads + '</div>' +
-              '<div class="form-group"><div class="item-inputs">' + correctionFields + '</div>' + uploads + '</div>' + 
+    markup = '<div class="item"><div class="form-group"><div class="item-inputs">' + causeFields + '</div>' + '</div>' +
+              '<div class="form-group"><div class="item-inputs">' + correctionFields + '</div>' + '</div>' + 
               '<div class="form-group delete-item">' + deleteCheckbox + '</div></div>'
     
     

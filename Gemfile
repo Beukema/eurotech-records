@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'ransack'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'mysql2', '>= 0.3.13', '< 0.5'

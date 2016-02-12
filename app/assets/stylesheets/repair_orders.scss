@@ -40,8 +40,6 @@
   
   &-uploads {
     display: inline-block;
-    width: 70px;
-    float: left;
     font-size: 26px;
     padding-top: 5px;
     
@@ -105,4 +103,13 @@
     display: inline-block;
     width: 180px;
   }
+}
+
+.title-no-margin {
+  margin-bottom: 5px !important;
+}
+
+.small-details {
+  font-size: 12px;
+  margin-top: 0;
 }

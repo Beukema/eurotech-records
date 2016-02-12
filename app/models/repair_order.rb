@@ -4,6 +4,17 @@ class RepairOrder < ActiveRecord::Base
   
   validates :ro_number, uniqueness: true, presence: true
   
+  def updated_last
+    soonest_date = updated_at
+    items.each do |i|
+      if i.updated_at > soonest_date
+        soonest_date = i.updated_at
+      end
+    end
+    
+    return soonest_date
+  end
+  
   def self.search(text)
     results = []
     

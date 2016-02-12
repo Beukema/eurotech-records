@@ -4,17 +4,17 @@
       <th>Repair order</th>
       <th>Year</th>
       <th>Model</th>
-      <th colspan="2"></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @repair_orders.each do |repair_order| %>
       <tr>
-        <td><%= repair_order.ro_number %></td>
+        <td><%= link_to repair_order.ro_number, repair_order %></td>
         <td><%= repair_order.year %></td>
         <td><%= repair_order.model %></td>
-        <td><%= link_to 'Show', repair_order %></td>
+        
         <td><%= link_to 'Edit', edit_repair_order_path(repair_order) %></td>
       </tr>
     <% end %>

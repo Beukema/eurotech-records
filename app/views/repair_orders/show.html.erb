@@ -1,4 +1,5 @@
-<h2>Repair Order #<%= @repair_order.ro_number %></h2>
+<h2 class="title-no-margin">Repair Order #<%= @repair_order.ro_number %></h2>
+<p class="small-details">Created: <%= time_ago_in_words(@repair_order.created_at) %> ago, Last Updated: <%= time_ago_in_words(@repair_order.updated_last) %> ago</p>
 <p>Year: <%= @repair_order.year %></p>
 <p>Model: <%= @repair_order.model %></p>
 
@@ -6,6 +7,12 @@
   <div class="repair-order-item panel">
     <p><strong class="item-label">Cause</strong><%= simple_format i.cause %></p>
     <p><strong class="item-label">Correction</strong><%= simple_format i.correction %></p>
+    <div class="item-uploads">
+      <span class="item-upload-field">
+        <i class="fa fa-camera"></i>
+        <i class="fa fa-paperclip"></i>
+      </span>
+    </div>
   </div>
 <% end %>
 
