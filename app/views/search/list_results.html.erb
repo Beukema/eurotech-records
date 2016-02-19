@@ -1,9 +1,16 @@
 <h2>Search Results</h2>
 <p>Searching for: <%= @search %></p>
-<%= render 'shared/search_box' %>
-<!--<%= render 'shared/repair_order_table' %>-->
+<div class="row">
+  <div class="large-8 columns">
+  </div>
+  <%= render 'shared/search_box' %>
+</div>
 
-<% @repair_orders.each do |r| %>
-<p>RO Number: <%= r.ro_number %> <%= link_to "Show", repair_order_path(r) %></p>
-<p><%= raw(r.highlight_fields(@search)) %></p>
+<% if !@repair_orders.empty? %>
+  <% @repair_orders.each do |r| %>
+    <p>RO Number: <%= r.ro_number %> <%= link_to "Show", repair_order_path(r) %></p>
+    <p><%= raw(r.highlight_fields(@search)) %></p>
+  <% end %>
+<% else %>
+  <p>No matches found</p>
 <% end %>

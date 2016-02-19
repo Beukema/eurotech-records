@@ -1,5 +1,15 @@
 <h2>Repair Orders</h2>
-<%= render 'shared/search_box' %>
+
+
+<div class="row">
+  <div class="large-8 columns">
+    <%= link_to 'New Repair order', new_repair_order_path, class: "button" %>
+  </div>
+  <%= render 'shared/search_box' %>
+</div>
+
+<%= will_paginate %>
+
 <%= render 'shared/repair_order_table' %>
-<br>
-<%= link_to 'New Repair order', new_repair_order_path %>
+
+<%= will_paginate %>

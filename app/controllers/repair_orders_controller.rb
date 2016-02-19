@@ -4,7 +4,7 @@ class RepairOrdersController < ApplicationController
   
   def index
     @q = RepairOrder.ransack(params[:q])
-    @repair_orders = RepairOrder.order(ro_number: :desc)
+    @repair_orders = RepairOrder.paginate(page: params[:page]).order(ro_number: :desc)
   end
   
   def show

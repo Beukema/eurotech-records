@@ -113,3 +113,34 @@
   font-size: 12px;
   margin-top: 0;
 }
+
+// Pagination
+$border-color: rgba(100,100,100, .4);
+
+.pagination{
+  margin-left: 0;
+  margin-bottom: 10px;
+  height: auto;
+  display: inline-block;
+  
+  span, em, a {
+    text-align: center;
+    display: inline-block;
+    min-width: 30px;
+    font-style: normal;
+    padding: 8px 8px;
+    border-left: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    float: left;
+    background-color: rgba(30,30,30,.5);
+    
+    &:hover:not(em, .disabled) {
+      background-color: rgba(50,50,50,.5)
+    }
+    
+    &:last-child {
+      border-right: 1px solid $border-color;
+    }
+  }
+}

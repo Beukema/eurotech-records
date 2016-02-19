@@ -4,6 +4,8 @@ class RepairOrder < ActiveRecord::Base
   
   validates :ro_number, uniqueness: true, presence: true
   
+  self.per_page = 20
+  
   def updated_last
     soonest_date = updated_at
     items.each do |i|
@@ -65,7 +67,9 @@ class RepairOrder < ActiveRecord::Base
       full_text += " " + i.cause + " " + i.correction
     end
     
-    full_text += " " + recommendations + " " + maintenance 
+    full_text += " " + recommendations + " " if !recommendations.nil?
+    full_text += " " + maintenance + " " if !maintenance.nil?
+    
     return full_text
   end
 end
