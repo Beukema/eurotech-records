@@ -14,7 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'will_paginate'
 gem 'ransack'
-gem 'aws-sdk'
+gem 'aws-sdk-v1'
 
 group :development, :test do
   gem 'mysql2', '>= 0.3.13', '< 0.5'

@@ -39,3 +39,13 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+
+require 'json'
+creds = JSON.load(File.read('.aws-creds.json'))
+
+AWS.config(
+  :access_key_id => creds["access_key_id"],
+  :secret_access_key => creds["secret_access_key"]
+)
+
+S3_BUCKET = AWS::S3.new.buckets[creds["s3_bucket"]]
