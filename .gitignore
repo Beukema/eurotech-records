@@ -11,3 +11,4 @@
 /log/*
 !/log/.keep
 /tmp
+.aws-creds.json

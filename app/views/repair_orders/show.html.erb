@@ -7,12 +7,27 @@
   <div class="repair-order-item panel">
     <p><strong class="item-label">Cause</strong><%= simple_format i.cause %></p>
     <p><strong class="item-label">Correction</strong><%= simple_format i.correction %></p>
+
     <div class="item-uploads">
       <span class="item-upload-field">
+        <%= form_tag uploads_path, enctype: 'multipart/form-data' do %>
+        <%= hidden_field(:item, :id, value: i.id) %>
+          <%= file_field_tag :file  %>
+          <%= submit_tag 'Upload file' %>
+        <% end %>
         <i class="fa fa-camera"></i>
         <i class="fa fa-paperclip"></i>
       </span>
     </div>
+    
+    <h4>Uploads</h4>
+    
+    <% i.uploads.each do |u| %>
+      <div class="repair-order-upload">
+        <%= image_tag(u.url, class: "repair-order-upload-image") %>
+      </div>
+    <% end %>
+    
   </div>
 <% end %>
 

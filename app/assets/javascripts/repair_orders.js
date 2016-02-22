@@ -1,7 +1,15 @@
 $(document).ready(function(){
-  $('.app-master-text').on('input', function(){
-    $('.app-mimic-text input[type=search]').val($(this).val())
+  
+  $(document).on('click', '.item-uploads .fa-camera', function(){
+    $(this).siblings('form').find('#file').click();
   });
+  
+  $(document).on('change', '.item-uploads #file', function(){
+    $(this).siblings('input[type=submit]').click();
+    $(this).parent().siblings('.fa-camera').removeClass('fa-camera').addClass('fa-spinner');
+  });
+  
+  
   
   $(document).on('click', '.add-item-button', function(e){
     e.preventDefault();
@@ -26,4 +34,37 @@ $(document).ready(function(){
     $('.item-list').append(markup);
     $('.item').last().find('textarea').first().focus()
   });
+  
+  
+  var modal = function(){
+    
+    var init = function(){
+      $('.modal-close').on('click', function(){
+        close();
+      });
+    }
+    
+    var open = function(content){
+      $('.modal-box-content').append(content);
+      $('.modal').removeClass('modal-hidden');
+    }
+    
+    var close = function(){
+      $('.modal').addClass('modal-hidden');
+      $('.modal-box-content').children().remove()
+    }
+    
+    return {
+      init: init,
+      open: open
+    }
+  }();
+  
+  modal.init();
+  
+  $('.repair-order-upload-image').on('click', function(){
+    console.log(this);
+    modal.open('<img src="' + $(this).attr('src') + '">');
+  })
+  
 });

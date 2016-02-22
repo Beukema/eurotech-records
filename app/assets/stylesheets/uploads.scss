@@ -1,0 +1,12 @@
+.repair-order-upload {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  
+  &-image {
+    object-fit: cover;
+    min-height: 100%;
+    cursor: pointer;
+  }
+}
