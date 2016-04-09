@@ -3,10 +3,20 @@
   width: 150px;
   height: 150px;
   overflow: hidden;
-  
+
   &-image {
     object-fit: cover;
     min-height: 100%;
     cursor: pointer;
+  }
+}
+
+.text-upload{
+
+  &-hidden {
+    display: none;
+    height: 0;
+    display: inline-block;
+    overflow:hidden;
   }
 }

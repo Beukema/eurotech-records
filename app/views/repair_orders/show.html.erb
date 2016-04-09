@@ -10,24 +10,48 @@
 
     <div class="item-uploads">
       <span class="item-upload-field">
-        <%= form_tag uploads_path, enctype: 'multipart/form-data' do %>
-        <%= hidden_field(:item, :id, value: i.id) %>
-          <%= file_field_tag :file  %>
-          <%= submit_tag 'Upload file' %>
-        <% end %>
+
         <i class="fa fa-camera"></i>
         <i class="fa fa-paperclip"></i>
+
+        
+        <div class="item-upload-photo">
+          <%= form_tag uploads_path, enctype: 'multipart/form-data' do %>
+          <%= hidden_field(:item, :id, value: i.id) %>
+            <%= file_field_tag :file  %>
+            <%= submit_tag 'Upload file' %>
+          <% end %>
+        </div>
+
+
+
+        <div class="item-upload-text">
+          <%= form_tag 'uploads/upload_text', :multipart => true do %>
+            <label for="file">Upload text File</label> <%= file_field_tag "file" %>
+            <%= hidden_field(:item, :id, value: i.id) %>
+            <%= submit_tag %>
+          <% end %>
+        </div>
+
       </span>
+
     </div>
-    
+
     <h4>Uploads</h4>
-    
+
     <% i.uploads.each do |u| %>
       <div class="repair-order-upload">
         <%= image_tag(u.url, class: "repair-order-upload-image") %>
       </div>
     <% end %>
-    
+
+    <% i.text_uploads.each do |u| %>
+      <div class="repair-order-text-upload">
+        <a href="#" class="text-upload-open"><%= u.filename %></a>
+        <span class="text-upload text-upload-hidden"><%= simple_format u.body %></span>
+      </div>
+    <% end %>
+
   </div>
 <% end %>
 
